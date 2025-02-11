@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.profile-header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    background-image: url("Images/Anime2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh; /* Reduced height */
+}
+
+.settings-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+}
+
+.menu .icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.gallery {
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.bottom-nav i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.bottom-nav .active {
+    background: red;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@media (min-width: 601px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        height: 30vh; /* Further reduced height for mobile */
+    }
+
+    .menu span,
+    .menu .icon {
+        font-size: 14px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .settings-icon {
+        font-size: 18px;
+    }
+}
